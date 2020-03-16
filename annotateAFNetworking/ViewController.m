@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "AFNetworking.h"
 
+#define testURL @"https://baidu.com/"
+
 @interface ViewController ()
 
 @end
@@ -18,7 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [[AFHTTPSessionManager manager] GET:testURL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 
